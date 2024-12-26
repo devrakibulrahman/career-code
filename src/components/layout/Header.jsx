@@ -31,7 +31,7 @@ const Header = () => {
                                 <img src={dark} alt="logo" className='w-full h-full object-cover' />
                             </div>
                             <div className="w-auto hidden sm:block">
-                                <h1 className="font-jakarta text-3xl font-bold text-gray-800">CareerCode</h1>
+                                <h1 className="font-jakarta text-2xl font-bold text-gray-800">CareerCode</h1>
                             </div>
                         </div>
                         <div className='w-full flex items-center justify-end gap-x-2'>
