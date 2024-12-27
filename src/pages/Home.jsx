@@ -74,6 +74,9 @@ const Home = () => {
                                         <p className="font-jakarta text-slate-400 font-light text-[15px] max-w-xl mx-auto leading-normal">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
                                     </div>
                                 </div>
+                                <div className="w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+
+                                </div>
                             </div>
                         </div>
                     </div>

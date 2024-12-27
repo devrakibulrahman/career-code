@@ -1,32 +1,38 @@
 [
     {
         "id": 1,
-        "title": "Web Development",
-        "jobs": 120,
-        "icon": "web-development-icon"
+        "title": "Frontend Development",
+        "jobs": 90,
+        "icon": "frontend-icon"
     },
     {
         "id": 2,
-        "title": "Digital Marketing",
-        "jobs": 50,
-        "icon": "digital-marketing-icon"
+        "title": "Backend Development",
+        "jobs": 110,
+        "icon": "backend-icon"
     },
     {
         "id": 3,
-        "title": "UI/UX Design",
-        "jobs": 85,
-        "icon": "ui-ux-design-icon"
+        "title": "Content Writing",
+        "jobs": 45,
+        "icon": "content-writing-icon"
     },
     {
         "id": 4,
-        "title": "DevOps Engineering",
-        "jobs": 70,
-        "icon": "devops-icon"
+        "title": "Graphic Design",
+        "jobs": 60,
+        "icon": "graphic-design-icon"
     },
     {
         "id": 5,
-        "title": "Artificial Intelligence",
-        "jobs": 40,
-        "icon": "ai-icon"
+        "title": "Cybersecurity",
+        "jobs": 35,
+        "icon": "cybersecurity-icon"
+    },
+    {
+        "id": 6,
+        "title": "Data Analysis",
+        "jobs": 75,
+        "icon": "data-analysis-icon"
     }
 ]
