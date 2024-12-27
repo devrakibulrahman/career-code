@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "filter": "Full Time"
+    },
+    {
+        "id": 2,
+        "filter": "Part Time"
+    },
+    {
+        "id": 3,
+        "filter": "Internship"
+    },
+    {
+        "id": 4,
+        "filter": "Remote Job"
+    },
+    {
+        "id": 5,
+        "filter": "Office Work"
+    }
+]

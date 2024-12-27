@@ -6,6 +6,7 @@ import { LuSettings } from "react-icons/lu";
 import dark from '../../assets/images/logo-dark.png';
 import profile from '../../assets/images/profile.png';
 import { useState } from "react";
+import { useScrollWindow } from "../../hooks/Hooks";
 
 const Header = () => {
     
@@ -14,6 +15,7 @@ const Header = () => {
 
     // hooks declare here
     const location = useLocation();
+    const winScroll = useScrollWindow();
 
     const handleNavbarActive = () => {
         setNavActive(!navActive);
@@ -22,7 +24,7 @@ const Header = () => {
 
     return (
         <>
-            <div className={`w-full min-h-[75px] flex items-center justify-center bg-white`}>
+            <div className={`w-full min-h-[75px] flex items-center justify-center fixed top-0 left-0 transition-colors ${winScroll ? 'bg-white ease-linear duration-200 shadow-sm' : 'bg-transparent ease-linear duration-200'}`}>
                 {/* navbar design */}
                 <div className="container mx-auto px-4">
                     <div className='w-full flex items-center justify-between'>
@@ -66,8 +68,8 @@ const Header = () => {
                 </div>
 
                 {/* responsive navbar design */}
-                <div className={`w-full h-screen bg-black/10 fixed top-0 transition-all ${navActive ? 'left-0 ease-linear duration-300' : '-left-[110%] ease-linear duration-500'}`}>
-                    <div className={`w-full max-w-[300px] h-screen bg-white fixed top-0 shadow-sm transition-all ${navActive ? 'left-0 ease-linear duration-500' : '-left-[120%] ease-linear duration-300'}`}>
+                <div className={`w-full h-screen bg-black/10 fixed top-0 transition-all ${navActive ? 'left-0 ease-linear duration-300' : '-left-[110%] ease-linear duration-500'} z-40`}>
+                    <div className={`w-full max-w-[300px] h-screen bg-white fixed top-0 shadow-sm transition-all ${navActive ? 'left-0 ease-linear duration-500' : '-left-[120%] ease-linear duration-300'} z-50`}>
                         <div className="w-full h-[75px] flex items-center justify-end pr-4">
                             <button onClick={handleNavbarActive} className="flex items-center justify-center">
                                 <IoClose className="text-3xl text-gray-800"></IoClose>
