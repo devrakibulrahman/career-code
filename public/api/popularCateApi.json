@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Web Development",
+        "jobs": 120,
+        "icon": "web-development-icon"
+    },
+    {
+        "id": 2,
+        "title": "Digital Marketing",
+        "jobs": 50,
+        "icon": "digital-marketing-icon"
+    },
+    {
+        "id": 3,
+        "title": "UI/UX Design",
+        "jobs": 85,
+        "icon": "ui-ux-design-icon"
+    },
+    {
+        "id": 4,
+        "title": "DevOps Engineering",
+        "jobs": 70,
+        "icon": "devops-icon"
+    },
+    {
+        "id": 5,
+        "title": "Artificial Intelligence",
+        "jobs": 40,
+        "icon": "ai-icon"
+    }
+]

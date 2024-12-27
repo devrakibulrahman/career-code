@@ -58,6 +58,27 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* category and about page */}
+            <section className="w-full">
+                <div className="w-full min-h-screen bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="w-full py-16 md:py-24">
+                            {/* category section */}
+                            <div className="w-full min-h-[500px]">
+                                <div className="w-full text-center pb-8">
+                                    <div className="w-auto text-center mb-4">
+                                        <h1 className="font-jakarta text-2xl leading-normal font-semibold text-gray-800 md:text-[26px] md:leading-normal">Populate Categories</h1>
+                                    </div>
+                                    <div className="w-auto">
+                                        <p className="font-jakarta text-slate-400 font-light text-[15px] max-w-xl mx-auto leading-normal">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
