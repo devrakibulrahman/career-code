@@ -1,3 +1,4 @@
+import { usePopularCate } from "../hooks/Hooks";
 import LandingForm from "../components/common/LandingForm";
 import Android from "../assets/icons/android.png";
 import Adobe from "../assets/icons/adobe.png";
@@ -5,8 +6,12 @@ import Meta from "../assets/icons/meta.png";
 import Microsoft from "../assets/icons/microsoft.png";
 import Figma from "../assets/icons/figma.png";
 import Snapchat from "../assets/icons/snapchat.png";
+import CategoryCard from "../components/common/CategoryCard";
 
 const Home = () => {
+
+    const categoryData = usePopularCate(`/api/popularCateApi.json`);
+
     return (
         <>
             {/* landing page */}
@@ -74,8 +79,12 @@ const Home = () => {
                                         <p className="font-jakarta text-slate-400 font-light text-[15px] max-w-xl mx-auto leading-normal">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
                                     </div>
                                 </div>
-                                <div className="w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
-                                    
+                                <div className="w-full grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 md:grid-cols-3">
+                                    {
+                                        categoryData?.map((cate) => (
+                                            <CategoryCard key={cate?.id} category={cate}></CategoryCard>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>

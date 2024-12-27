@@ -1,38 +1,38 @@
 [
     {
         "id": 1,
-        "title": "Frontend Development",
-        "jobs": 90,
-        "icon": "frontend-icon"
+        "title": "Frontend\nDevelopment",
+        "jobs": "90 Jobs",
+        "icon": "/icons/frontend.png"
     },
     {
         "id": 2,
-        "title": "Backend Development",
-        "jobs": 110,
-        "icon": "backend-icon"
+        "title": "Backend\nDevelopment",
+        "jobs": "11 Jobs",
+        "icon": "/icons/backend.png"
     },
     {
         "id": 3,
-        "title": "Content Writing",
-        "jobs": 45,
-        "icon": "content-writing-icon"
+        "title": "Content\nWriting",
+        "jobs": "45 Jobs",
+        "icon": "/icons/writing.png"
     },
     {
         "id": 4,
-        "title": "Graphic Design",
-        "jobs": 60,
-        "icon": "graphic-design-icon"
+        "title": "Graphic\nDesign",
+        "jobs": "60 Jobs",
+        "icon": "/icons/design.png"
     },
     {
         "id": 5,
-        "title": "Cybersecurity",
-        "jobs": 35,
-        "icon": "cybersecurity-icon"
+        "title": "Cyber\nsecurity",
+        "jobs": "35 Jobs",
+        "icon": "/icons/security.png"
     },
     {
         "id": 6,
-        "title": "Data Analysis",
-        "jobs": 75,
-        "icon": "data-analysis-icon"
+        "title": "Data\nAnalysis",
+        "jobs": "75 Jobs",
+        "icon": "/icons/analysis.png"
     }
 ]
