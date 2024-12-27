@@ -24,7 +24,7 @@ const Header = () => {
 
     return (
         <>
-            <div className={`w-full min-h-[75px] flex items-center justify-center fixed top-0 left-0 transition-colors ${winScroll ? 'bg-white ease-linear duration-200 shadow-sm' : 'bg-transparent ease-linear duration-200'}`}>
+            <div className={`w-full min-h-[75px] flex items-center justify-center fixed top-0 left-0 z-30 transition-colors ${winScroll ? 'bg-white ease-linear duration-200 shadow-sm' : 'bg-transparent ease-linear duration-200'}`}>
                 {/* navbar design */}
                 <div className="container mx-auto px-4">
                     <div className='w-full flex items-center justify-between'>
