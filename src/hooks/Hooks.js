@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useLocations = (url) => {
-    const [locationData, setLocationData] = useState([]);
-    console.log(locationData);
+    const [locationData, setLocationData] = useState(null);
 
     useEffect(() => {
         fetch(`${url}`)
@@ -27,6 +26,19 @@ const useJobFilter = (url) => {
     return filterData;
 };
 
+const usePopularCate = (url) => {
+    const [popularCate, setPopularCate] = useState(null);
+
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setPopularCate(data))
+            .catch(err => console.log(err))
+    }, [url]);
+
+    return popularCate;
+};
+
 const useScrollWindow = () => {
     const [winScroll, setWinScroll] = useState(false);
 
@@ -43,4 +55,4 @@ const useScrollWindow = () => {
     return winScroll;
 };
 
-export { useLocations, useJobFilter, useScrollWindow };
+export { useLocations, useJobFilter, usePopularCate, useScrollWindow };
