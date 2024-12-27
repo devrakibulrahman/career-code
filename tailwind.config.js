@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import scrollBar from 'tailwind-scrollbar';
-import scrollBarHide from 'tailwind-scrollbar-hide';
 
 export default {
   content: [
@@ -12,10 +10,11 @@ export default {
       fontFamily: {
         "jakarta": ["Plus Jakarta Sans", "serif"],
       },
+      backgroundImage: {
+        "about1": 'url(/about1.jpg)',
+        "about2": 'url(/about2.jpg)'
+      }
     },
   },
-  plugins: [
-    scrollBar,
-    scrollBarHide,
-  ],
+  plugins: [],
 }

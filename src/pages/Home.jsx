@@ -1,4 +1,6 @@
 import { usePopularCate } from "../hooks/Hooks";
+import { Link } from "react-router-dom";
+import { IoMdArrowRoundForward } from "react-icons/io";
 import LandingForm from "../components/common/LandingForm";
 import Android from "../assets/icons/android.png";
 import Adobe from "../assets/icons/adobe.png";
@@ -7,6 +9,7 @@ import Microsoft from "../assets/icons/microsoft.png";
 import Figma from "../assets/icons/figma.png";
 import Snapchat from "../assets/icons/snapchat.png";
 import CategoryCard from "../components/common/CategoryCard";
+import JopCard from "../components/common/JopCard";
 
 const Home = () => {
 
@@ -14,13 +17,13 @@ const Home = () => {
 
     return (
         <>
-            {/* landing page */}
+            {/* landing section */}
             <section className="w-full">
-                <div className="w-full min-h-screen bg-emerald-600/5 inset-0 py-36 md:py-56 relative">
+                <div className="w-full bg-emerald-600/5 inset-0 py-36 md:py-56 relative">
                     <div className="container mx-auto px-4">
                         <div className="w-full">
-                            <div className="w-full h-full absolute top-0 left-0 bg-transparent -z-10">
-                                <div className="w-10 h-10 animate-[bounce_2s_infinite] bg-white shadow-md rounded-md overflow-hidden flex items-center justify-center p-2 absolute top-[12%] left-[50%] transform -translate-x-1/2">
+                            <div className="w-full max-w-[1200px] h-full absolute top-0 left-1/2 bg-transparent -z-10 transform -translate-x-1/2">
+                                <div className="w-10 h-10 animate-[bounce_2s_infinite] bg-white shadow-md rounded-md overflow-hidden flex items-center justify-center p-2 absolute top-[20%] left-[50%] transform -translate-x-1/2">
                                     <img src={Adobe} alt="icon" className="w-full h-full object-cover" />
                                 </div>
                                 <div className="w-10 h-10 animate-[pulse_2s_infinite] bg-white shadow-md rounded-md overflow-hidden flex items-center justify-center p-2 absolute bottom-[8%] left-[48.9%]">
@@ -64,13 +67,12 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* category and about page */}
+            {/* category section */}
             <section className="w-full">
-                <div className="w-full min-h-screen bg-white">
+                <div className="w-full min-h-[300px] bg-white">
                     <div className="container mx-auto px-4">
                         <div className="w-full py-16 md:py-24">
-                            {/* category section */}
-                            <div className="w-full min-h-[500px]">
+                            <div className="w-full min-h-[300px]">
                                 <div className="w-full text-center pb-8">
                                     <div className="w-auto text-center mb-4">
                                         <h1 className="font-jakarta text-2xl leading-normal font-semibold text-gray-800 md:text-[26px] md:leading-normal">Populate Categories</h1>
@@ -79,7 +81,7 @@ const Home = () => {
                                         <p className="font-jakarta text-slate-400 font-light text-[15px] max-w-xl mx-auto leading-normal">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
                                     </div>
                                 </div>
-                                <div className="w-full grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 md:grid-cols-3">
+                                <div className="w-full grid grid-cols-1 gap-8 mt-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
                                     {
                                         categoryData?.map((cate) => (
                                             <CategoryCard key={cate?.id} category={cate}></CategoryCard>
@@ -89,6 +91,39 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* popular job section */}
+            <section className="w-full">
+                <div className="w-full min-h-[500px] bg-slate-50">
+                   <div className="container mx-auto px-4">
+                        <div className="w-full py-16 md:py-24">
+                            <div className="w-full min-h-[300px]">
+                                <div className="w-full text-center pb-8">
+                                    <div className="w-auto text-center mb-4">
+                                        <h1 className="font-jakarta text-2xl leading-normal font-semibold text-gray-800 md:text-[26px] md:leading-normal">Populate Jobs</h1>
+                                    </div>
+                                    <div className="w-auto">
+                                        <p className="font-jakarta text-slate-400 font-light text-[15px] max-w-xl mx-auto leading-normal">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
+                                    </div>
+                                </div>
+                                <div className="w-full grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
+                                    <JopCard></JopCard>
+                                    <JopCard></JopCard>
+                                    <JopCard></JopCard>
+                                    <JopCard></JopCard>
+                                    <JopCard></JopCard>
+                                    <JopCard></JopCard>
+                                </div>
+                                <div className="w-full text-center mt-10">
+                                    <div className="w-auto inline-block">
+                                        <Link className="font-jakarta text-[15px] font-medium text-gray-400 flex items-center justify-center gap-1 transition-all ease-linear duration-200 hover:text-gray-800 group">See More Jobs <IoMdArrowRoundForward className="mt-1 transition ease-linear duration-300 transform group-hover:translate-x-1"></IoMdArrowRoundForward></Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+                   </div>
                 </div>
             </section>
         </>

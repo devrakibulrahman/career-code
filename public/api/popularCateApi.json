@@ -12,18 +12,6 @@
         "icon": "/icons/backend.png"
     },
     {
-        "id": 3,
-        "title": "Content\nWriting",
-        "jobs": "45 Jobs",
-        "icon": "/icons/writing.png"
-    },
-    {
-        "id": 4,
-        "title": "Graphic\nDesign",
-        "jobs": "60 Jobs",
-        "icon": "/icons/design.png"
-    },
-    {
         "id": 5,
         "title": "Cyber\nsecurity",
         "jobs": "35 Jobs",
