@@ -1,6 +1,6 @@
 import { useCareerCode, usePopularCate } from "../hooks/Hooks";
 import { Link } from "react-router-dom";
-import { IoMdArrowRoundForward } from "react-icons/io";
+import { IoMdArrowForward } from "react-icons/io";
 import LandingForm from "../components/common/LandingForm";
 import Android from "../assets/icons/android.png";
 import Adobe from "../assets/icons/adobe.png";
@@ -9,8 +9,9 @@ import Microsoft from "../assets/icons/microsoft.png";
 import Figma from "../assets/icons/figma.png";
 import Snapchat from "../assets/icons/snapchat.png";
 import CategoryCard from "../components/common/CategoryCard";
-import JopCard from "../components/common/JobCard";
+import JopCard from "../components/job/JobCard";
 import CareerCodeCard from "../components/common/CareerCodeCard";
+import LatestNewsCard from "../components/common/LatestNewsCard";
 
 const Home = () => {
 
@@ -121,7 +122,7 @@ const Home = () => {
                                 </div>
                                 <div className="w-full text-center mt-10">
                                     <div className="w-auto inline-block">
-                                        <Link className="font-jakarta text-[15px] font-medium text-gray-400 flex items-center justify-center gap-1 transition-all ease-linear duration-200 hover:text-gray-800 group">See More Jobs <IoMdArrowRoundForward className="mt-1 transition ease-linear duration-300 transform group-hover:translate-x-1"></IoMdArrowRoundForward></Link>
+                                        <Link className="font-jakarta text-[15px] font-medium text-gray-400 flex items-center justify-center gap-1 transition-all ease-linear duration-200 hover:text-gray-800 group">See More Jobs <IoMdArrowForward className="mt-1 transition ease-linear duration-300 transform group-hover:translate-x-1"></IoMdArrowForward></Link>
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +172,9 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="w-full grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-                                
+                                <LatestNewsCard></LatestNewsCard>
+                                <LatestNewsCard></LatestNewsCard>
+                                <LatestNewsCard></LatestNewsCard>
                             </div>
                         </div>
                     </div>
