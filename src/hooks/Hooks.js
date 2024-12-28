@@ -52,6 +52,19 @@ const useCareerCode = (url) => {
     return careerCode;
 };
 
+const useLatestNews = (url) => {
+    const [latestNews, setLatestNews] = useState(null);
+
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setLatestNews(data))
+            .catch(err => console.log(err))
+    }, [url]);
+
+    return latestNews;
+};
+
 const useScrollWindow = () => {
     const [winScroll, setWinScroll] = useState(false);
 
@@ -68,4 +81,4 @@ const useScrollWindow = () => {
     return winScroll;
 };
 
-export { useLocations, useJobFilter, usePopularCate, useCareerCode, useScrollWindow };
+export { useLocations, useJobFilter, usePopularCate, useCareerCode, useLatestNews, useScrollWindow };
