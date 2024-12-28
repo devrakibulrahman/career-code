@@ -14,7 +14,9 @@ export default {
         "about1": 'url(/about1.jpg)',
         "about2": 'url(/about2.jpg)',
         "icon1": 'url(/icons/envelop.png)',
-        "icon2": 'url(/icons/pen.png)'
+        "icon2": 'url(/icons/pen.png)',
+        "signin": 'url(/img/signin.jpg)',
+        "signup": 'url(/img/signup.jpg)',
       }
     },
   },
