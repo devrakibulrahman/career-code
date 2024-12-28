@@ -1,9 +1,11 @@
 
 const SignUpPage = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <div className="w-full h-screen relative">
+
+            </div>
+        </>
     );
 };
 
