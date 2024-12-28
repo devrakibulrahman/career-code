@@ -12,7 +12,9 @@ export default {
       },
       backgroundImage: {
         "about1": 'url(/about1.jpg)',
-        "about2": 'url(/about2.jpg)'
+        "about2": 'url(/about2.jpg)',
+        "icon1": 'url(/icons/envelop.png)',
+        "icon2": 'url(/icons/pen.png)'
       }
     },
   },

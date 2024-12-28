@@ -41,9 +41,8 @@ const Header = () => {
                                 <nav className="w-full">
                                     <ul className="w-full flex items-center justify-center gap-x-8">
                                         <li className="font-jakarta text-base font-medium text-gray-800 transition ease-linear duration-200 hover:text-emerald-600"><NavLink to="/" className={`${location.pathname === '/' && 'text-emerald-600'}`}>Home</NavLink></li>
-                                        <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink>Add Job</NavLink></li>
-                                        <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink>My Applications</NavLink></li>
-                                        <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink>My Job Posts</NavLink></li>
+                                        <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink>All Job</NavLink></li>
+                                        <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink>Dashboard</NavLink></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -93,9 +92,9 @@ const Header = () => {
                                 <ul className="w-full flex flex-col">
                                     <li className="font-jakarta text-base text-gray-800 font-medium pl-7 py-4 border-b border-gray-100"><NavLink to="/" className={`${location.pathname === '/' && 'text-emerald-600'}`}>Home</NavLink></li>
                                     <li className="font-jakarta text-base text-gray-800 font-medium pl-7 py-4 border-b border-gray-100"><NavLink>All Job&apos;s</NavLink></li>
-                                    <li className="font-jakarta text-base text-gray-800 font-medium pl-7 py-4 border-b border-gray-100"><NavLink>Add Job</NavLink></li>
                                     <li className="font-jakarta text-base text-gray-800 font-medium pl-7 py-4 border-b border-gray-100"><NavLink>My Applications</NavLink></li>
                                     <li className="font-jakarta text-base text-gray-800 font-medium pl-7 py-4 border-b border-gray-100"><NavLink>My Job Posts</NavLink></li>
+                                    <li className="font-jakarta text-base text-gray-800 font-medium pl-7 py-4 border-b border-gray-100"><NavLink>Dashboard</NavLink></li>
                                 </ul>
                             </nav>
                         </div>
