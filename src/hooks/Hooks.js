@@ -39,6 +39,19 @@ const usePopularCate = (url) => {
     return popularCate;
 };
 
+const useCareerCode = (url) => {
+    const [careerCode, setCareerCode] = useState(null);
+
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setCareerCode(data))
+            .catch(err => console.log(err))
+    }, [url]);
+
+    return careerCode;
+};
+
 const useScrollWindow = () => {
     const [winScroll, setWinScroll] = useState(false);
 
@@ -55,4 +68,4 @@ const useScrollWindow = () => {
     return winScroll;
 };
 
-export { useLocations, useJobFilter, usePopularCate, useScrollWindow };
+export { useLocations, useJobFilter, usePopularCate, useCareerCode, useScrollWindow };
