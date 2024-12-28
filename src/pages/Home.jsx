@@ -1,4 +1,4 @@
-import { usePopularCate } from "../hooks/Hooks";
+import { useCareerCode, usePopularCate } from "../hooks/Hooks";
 import { Link } from "react-router-dom";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import LandingForm from "../components/common/LandingForm";
@@ -9,11 +9,14 @@ import Microsoft from "../assets/icons/microsoft.png";
 import Figma from "../assets/icons/figma.png";
 import Snapchat from "../assets/icons/snapchat.png";
 import CategoryCard from "../components/common/CategoryCard";
-import JopCard from "../components/common/JopCard";
+import JopCard from "../components/common/JobCard";
+import CareerCodeCard from "../components/common/CareerCodeCard";
 
 const Home = () => {
 
+    // custom hooks declare here ---->
     const categoryData = usePopularCate(`/api/popularCateApi.json`);
+    const careerCode = useCareerCode(`/api/careerCodeApi.json`);
 
     return (
         <>
@@ -140,6 +143,13 @@ const Home = () => {
                                     <div className="w-auto">
                                         <p className="font-jakarta text-slate-400 font-light text-[15px] max-w-xl mx-auto leading-normal">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
                                     </div>
+                                </div>
+                                <div className="w-full grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
+                                    {
+                                        careerCode?.map((data, idx) => (
+                                            <CareerCodeCard key={idx} career={data}></CareerCodeCard>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>

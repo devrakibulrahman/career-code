@@ -1,21 +1,20 @@
 [
-    {
-      "icon": "💡",
-      "title": "Innovative Solutions",
-      "description": "Discover cutting-edge tools to simplify your work process.",
-      "cta": "Learn More →"
-    },
-    {
-      "icon": "📦",
-      "title": "All-in-One Platform",
-      "description": "Access everything you need in one convenient place.",
-      "cta": "Explore Now →"
-    },
-    {
-      "icon": "🌱",
-      "title": "Sustainable Practices",
-      "description": "Join the movement for eco-friendly and sustainable growth.",
-      "cta": "Get Started →"
-    }
+  {
+    "icon": "/icons/solution.png",
+    "title": "Innovative Solutions",
+    "description": "Discover cutting-edge tools to simplify your work process.",
+    "cta": "Learn More"
+  },
+  {
+    "icon": "/icons/productivity.png",
+    "title": "Boost Productivity",
+    "description": "Maximize efficiency with tailored resources and tools.",
+    "cta": "Learn More"
+  },
+  {
+    "icon": "/icons/brain.png",
+    "title": "Sustainable Practices",
+    "description": "Join the movement for eco-friendly and sustainable growth.",
+    "cta": "Learn More"
+  }
 ]
-  
