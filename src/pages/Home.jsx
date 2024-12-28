@@ -111,7 +111,7 @@ const Home = () => {
                                         <p className="font-jakarta text-slate-400 font-light text-[15px] max-w-xl mx-auto leading-normal">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
                                     </div>
                                 </div>
-                                <div className="w-full grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
+                                <div className="w-full grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
                                     <JopCard></JopCard>
                                     <JopCard></JopCard>
                                     <JopCard></JopCard>
@@ -130,7 +130,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* why jobstack */}
+            {/* why career code */}
             <section className="w-full">
                 <div className="w-full min-h-[500px] bg-white">
                     <div className="container mx-auto px-4">
@@ -151,6 +151,27 @@ const Home = () => {
                                         ))
                                     }
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* latest new */}
+            <section className="w-full">
+                <div className="w-full min-h-[500px] bg-slate-50">
+                    <div className="container mx-auto px-4">
+                        <div className="w-full py-16 md:py-24">
+                            <div className="w-full text-center pb-8">
+                                <div className="w-auto text-center mb-4">
+                                    <h1 className="font-jakarta text-2xl leading-normal font-semibold text-gray-800 md:text-[26px] md:leading-normal">Latest Blog or News</h1>
+                                </div>
+                                <div className="w-auto">
+                                    <p className="font-jakarta text-slate-400 font-light text-[15px] max-w-xl mx-auto leading-normal">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
+                                </div>
+                            </div>
+                            <div className="w-full grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                                
                             </div>
                         </div>
                     </div>
