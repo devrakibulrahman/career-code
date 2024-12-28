@@ -1,4 +1,4 @@
-import { useCareerCode, usePopularCate } from "../hooks/Hooks";
+import { useCareerCode, useLatestNews, usePopularCate } from "../hooks/Hooks";
 import { Link } from "react-router-dom";
 import { IoMdArrowForward } from "react-icons/io";
 import LandingForm from "../components/common/LandingForm";
@@ -18,6 +18,7 @@ const Home = () => {
     // custom hooks declare here ---->
     const categoryData = usePopularCate(`/api/popularCateApi.json`);
     const careerCode = useCareerCode(`/api/careerCodeApi.json`);
+    const latestNews = useLatestNews(`/api/latestNewsApi.json`);
 
     return (
         <>
@@ -172,9 +173,11 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="w-full grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-                                <LatestNewsCard></LatestNewsCard>
-                                <LatestNewsCard></LatestNewsCard>
-                                <LatestNewsCard></LatestNewsCard>
+                                {
+                                    latestNews?.map((data, idx) => (
+                                        <LatestNewsCard key={idx} news={data}></LatestNewsCard>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>

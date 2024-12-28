@@ -4,24 +4,24 @@
         "date": "15th March, 2023",
         "readTime": "7 min read",
         "title": "Top 10 AI Tools Revolutionizing Industries",
-        "ctaText": "Discover More",
-        "author": "Microsoft"
+        "author": "Microsoft",
+        "img": "/img/1.jpg"
     },
     {
         "category": "Business",
         "date": "10th April, 2023",
         "readTime": "4 min read",
         "title": "How to Scale Your Startup in a Competitive Market",
-        "ctaText": "Learn More",
-        "author": "Amazon"
+        "author": "Amazon",
+        "img": "/img/2.jpg"
     },
     {
         "category": "Design",
         "date": "5th May, 2023",
         "readTime": "6 min read",
         "title": "Creating Stunning Visuals with Minimal Effort",
-        "ctaText": "Explore Now",
-        "author": "Adobe"
+        "author": "Adobe",
+        "img": "/img/3.jpg"
     }
 ]
   
