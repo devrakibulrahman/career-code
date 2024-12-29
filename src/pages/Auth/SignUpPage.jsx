@@ -7,7 +7,7 @@ const SignUpPage = () => {
 
     return (
         <>
-            <div className="w-full min-h-screen relative bg-signin bg-cover bg-center bg-no-repeat">
+            <div className="w-full min-h-screen relative bg-signup bg-cover bg-center bg-no-repeat">
                 <div className="w-full min-h-screen bg-gradient-to-b from-transparent to-slate-900">
                     <div className="container mx-auto px-4">
                         <div className="w-full min-h-screen flex items-center">
