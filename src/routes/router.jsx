@@ -7,6 +7,7 @@ import SignInPage from "../pages/Auth/SignInPage";
 import AllJob from "../pages/AllJob";
 import Contact from "../pages/Contact";
 import Dashboard from "../pages/Dashboard";
+import Error from "../pages/Error";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
                 path: '/contact',
                 element: <Contact></Contact>
             },
+            {
+                path: '*',
+                element: <Error></Error>
+            }
         ],
     },
 ]);
