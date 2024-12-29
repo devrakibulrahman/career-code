@@ -55,7 +55,7 @@ const Header = () => {
                                     <ul className="w-full flex items-center justify-center gap-x-8">
                                         <li className={`font-jakarta text-base font-medium ${location.pathname !== '/' ? `${winScroll ? 'text-gray-800 ease-linear duration-200 hover:text-emerald-600' : 'text-white/50 ease-linear duration-200 hover:text-white'}` : 'text-emerald-600'}`}><NavLink to="/" >Home</NavLink></li>
                                         <li className={`font-jakarta text-base font-medium ${location.pathname !== '/' && location.pathname === '/all_jobs' ? `${winScroll ? 'text-emerald-600' : 'text-white'}` : 'text-gray-800'}`}><NavLink to='/all_jobs' >All Job</NavLink></li>
-                                        <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink>Dashboard</NavLink></li>
+                                        <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink to='/dashboard'>Dashboard</NavLink></li>
                                         <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink to='/contact'>Contact</NavLink></li>
                                     </ul>
                                 </nav>

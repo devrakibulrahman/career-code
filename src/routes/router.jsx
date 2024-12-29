@@ -6,6 +6,7 @@ import SignUpPage from "../pages/Auth/SignUpPage";
 import SignInPage from "../pages/Auth/SignInPage";
 import AllJob from "../pages/AllJob";
 import Contact from "../pages/Contact";
+import Dashboard from "../pages/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -35,9 +36,13 @@ const router = createBrowserRouter([
                 element: <AllJob></AllJob>
             },
             {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
+            },
+            {
                 path: '/contact',
                 element: <Contact></Contact>
-            }
+            },
         ],
     },
 ]);
