@@ -8,6 +8,7 @@ import AllJob from "../pages/AllJob";
 import Contact from "../pages/Contact";
 import Dashboard from "../pages/Dashboard";
 import Error from "../pages/Error";
+import AddJob from "../pages/AddJob";
 
 const router = createBrowserRouter([
     {
@@ -38,7 +39,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <Dashboard></Dashboard>,
+            },
+            {
+                path: '/add_job',
+                element: <AddJob></AddJob>
             },
             {
                 path: '/contact',
