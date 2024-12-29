@@ -3,8 +3,14 @@ import { Link } from "react-router-dom";
 import contact from '../assets/svg/contact.svg';
 import Input from "../components/Input";
 import TextArea from "../components/TextArea";
+import ContactCard from "../components/common/ContactCard";
+import { useContact } from "../hooks/Hooks";
 
 const Contact = () => {
+
+    // hooks declare here ---->
+    const contactInfo = useContact(`/api/contactInfoApi.json`);
+
     return (
         <>
             <section className="w-full min-h-screen">
@@ -75,6 +81,15 @@ const Contact = () => {
                                         </div>
                                     </form>
                                 </div>
+                            </div>
+                        </div>
+                        <div className="w-full mt-16 lg:mt-24">
+                            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                                {
+                                    contactInfo?.map((data) => (
+                                        <ContactCard key={data?.id} contact={data}></ContactCard>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>

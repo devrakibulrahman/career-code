@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "icon": "/icons/telephone.png",
+      "title": "Support",
+      "description": "Contact us anytime for assistance with your inquiries or services.",
+      "details": "+123 456 789 101"
+    },
+    {
+      "id": 2,
+      "icon": "/icons/mail.png",
+      "title": "Helpdesk",
+      "description": "Reach out via email for detailed support or additional information.",
+      "details": "help@support.com"
+    },
+    {
+      "id": 3,
+      "icon": "/icons/location.png",
+      "title": "Address",
+      "description": "Visit our office for in-person support or scheduled meetings.",
+      "details": "21 Avenue Street, Downtown, California, USA"
+    }
+]
+  

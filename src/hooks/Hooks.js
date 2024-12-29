@@ -65,6 +65,19 @@ const useLatestNews = (url) => {
     return latestNews;
 };
 
+const useContact = (url) => {
+    const [contact, setContact] = useState(null);
+
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setContact(data))
+            .catch(err => console.log(err))
+    }, [url]);
+
+    return contact
+}
+
 const useScrollWindow = () => {
     const [winScroll, setWinScroll] = useState(false);
 
@@ -81,4 +94,4 @@ const useScrollWindow = () => {
     return winScroll;
 };
 
-export { useLocations, useJobFilter, usePopularCate, useCareerCode, useLatestNews, useScrollWindow };
+export { useLocations, useJobFilter, usePopularCate, useCareerCode, useLatestNews, useContact, useScrollWindow };
