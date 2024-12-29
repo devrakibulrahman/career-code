@@ -9,6 +9,7 @@ import Contact from "../pages/Contact";
 import Dashboard from "../pages/Dashboard";
 import Error from "../pages/Error";
 import AddJob from "../pages/AddJob";
+import JobDetail from "../pages/JobDetail";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path: '/add_job',
                 element: <AddJob></AddJob>
+            },
+            {
+                path: '/job_detail',
+                element: <JobDetail></JobDetail>
             },
             {
                 path: '/contact',
