@@ -71,16 +71,13 @@ const SignUpPage = () => {
                                                 </p>
                                             </div>
                                         </div>
-                                        {/* <div className='w-auto'>
-                                            <Link className='font-jakarta text-slate-400 text-[15px] font-normal transition-all ease-linear duration-200 hover:underline'>Forgot password?</Link>
-                                        </div> */}
                                     </div>
                                     <div className='w-full mb-4'>
                                         <button className="font-jakarta text-[15px] font-semibold bg-emerald-600 w-full px-5 py-2 text-white rounded-md transition-all ease-linear duration-200 hover:bg-emerald-700">Sign In</button>
                                     </div>
                                     <div className='w-full text-center'>
                                         <span className='font-jakarta text-[15px] font-normal text-slate-400 me-2'>Already have an account?</span>
-                                        <Link className='font-jakarta text-[15px] font-bold text-gray-800'>Sign In</Link>
+                                        <Link to="/auth/sign_in" className='font-jakarta text-[15px] font-bold text-gray-800'>Sign In</Link>
                                     </div>
                                 </form>
                             </div>
