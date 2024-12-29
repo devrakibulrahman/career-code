@@ -17,7 +17,8 @@ export default {
         "icon2": 'url(/icons/pen.png)',
         "signin": 'url(/img/signin.png)',
         "signup": 'url(/img/signup.png)',
-      }
+        "all-job-bg": 'url(/img/bg.png)'
+      },
     },
   },
   plugins: [],

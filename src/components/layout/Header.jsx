@@ -3,10 +3,11 @@ import { NavLink, useLocation } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { MdOutlineLightMode } from "react-icons/md";
 import { LuSettings } from "react-icons/lu";
-import dark from '../../assets/images/logo-dark.png';
-import profile from '../../assets/images/profile.png';
 import { useState } from "react";
 import { useScrollWindow } from "../../hooks/Hooks";
+import dark from '../../assets/images/logo-dark.png';
+import light from '../../assets/images/logo-light.png';
+import profile from '../../assets/images/profile.png';
 
 const Header = () => {
     
@@ -30,18 +31,30 @@ const Header = () => {
                     <div className='w-full flex items-center justify-between'>
                         <div className="w-auto h-auto flex items-center justify-start gap-x-2">
                             <div className="w-[40px] h-[40px] sm:w-[28px] sm:h-[28px]">
-                                <img src={dark} alt="logo" className='w-full h-full object-cover' />
+                                {
+                                    location.pathname !== '/'
+                                    ?
+                                        (
+                                            winScroll
+                                            ?
+                                                <img src={dark} alt="logo" className='w-full h-full object-cover' />
+                                            :
+                                                <img src={light} alt="logo" className='w-full h-full object-cover' />
+                                        )
+                                    :
+                                        <img src={dark} alt="logo" className='w-full h-full object-cover' />
+                                }
                             </div>
                             <div className="w-auto hidden sm:block">
-                                <h1 className="font-jakarta text-2xl font-bold text-gray-800">CareerCode</h1>
+                                <h1 className={`font-jakarta text-2xl font-bold ${location.pathname !== '/' ? `${winScroll ? 'text-gray-800' : 'text-white'}` : 'text-gray-800'}`}>CareerCode</h1>
                             </div>
                         </div>
                         <div className='w-full flex items-center justify-end gap-x-2'>
                             <div className="w-auto mr-7 hidden lg:block">
                                 <nav className="w-full">
                                     <ul className="w-full flex items-center justify-center gap-x-8">
-                                        <li className="font-jakarta text-base font-medium text-gray-800 transition ease-linear duration-200 hover:text-emerald-600"><NavLink to="/" className={`${location.pathname === '/' && 'text-emerald-600'}`}>Home</NavLink></li>
-                                        <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink>All Job</NavLink></li>
+                                        <li className={`font-jakarta text-base font-medium ${location.pathname !== '/' ? `${winScroll ? 'text-gray-800 ease-linear duration-200 hover:text-emerald-600' : 'text-white/50 ease-linear duration-200 hover:text-white'}` : 'text-emerald-600'}`}><NavLink to="/" >Home</NavLink></li>
+                                        <li className={`font-jakarta text-base font-medium ${location.pathname !== '/' && location.pathname === '/all_jobs' ? `${winScroll ? 'text-emerald-600' : 'text-white'}` : 'text-gray-800'}`}><NavLink to='/all_jobs' >All Job</NavLink></li>
                                         <li className="font-jakarta text-base text-gray-800 font-medium"><NavLink>Dashboard</NavLink></li>
                                     </ul>
                                 </nav>
