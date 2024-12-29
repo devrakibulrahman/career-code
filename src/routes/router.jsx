@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Auth from "../pages/Auth";
 import SignUpPage from "../pages/Auth/SignUpPage";
 import SignInPage from "../pages/Auth/SignInPage";
+import AllJob from "../pages/AllJob";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
                     },
                 ],
             },
+            {
+                path: '/all_jobs',
+                element: <AllJob></AllJob>
+            }
         ],
     },
 ]);
