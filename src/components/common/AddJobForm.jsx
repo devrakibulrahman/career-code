@@ -3,7 +3,7 @@ import Input from '../Input';
 import TextArea from '../TextArea';
 import InputNumber from "../InputNumber";
 import { useState } from "react";
-import { useIndustryType, useJobCate, useJobType, useSalaryType } from "../../hooks/Hooks";
+import { useCountry, useIndustryType, useJobCate, useJobType, useSalaryType } from "../../hooks/Hooks";
 
 const AddJobForm = () => {
 
@@ -12,13 +12,14 @@ const AddJobForm = () => {
     const [jobTypeSelect, setJobTypeSelect] = useState('Select Job Type');
     const [jobSalarySelect, setJobSalarySelect] = useState('Select Salary Type');
     const [industrySelect, setIndustrySelect] = useState('Select Industry Type');
-    const [country, setCountry] = useState('Select Country');
+    const [countrySelect, setCountrySelect] = useState('Select Country');
 
     // hooks declare here ---->
     const jobCate = useJobCate(`/api/jobCategoryApi.json`);
     const jobType = useJobType(`/api/jobTypeApi.json`);
     const salaryType = useSalaryType(`/api/salaryApi.json`);
     const industryType = useIndustryType(`/api/industryTypeApi.json`);
+    const countryType = useCountry(`/api/countryApi.json`);
 
     // true and false state declare here ---->
     const [jobCateSelectActive, setJobCateSelectActive] = useState(false);
@@ -65,6 +66,7 @@ const AddJobForm = () => {
         setJobTypeSelectActive(false);
         setJobCateSelectActive(false);
         setSalaryTypeSelectActive(false);
+        setIndustrySelectActive(false);
     };
 
     return (
@@ -233,7 +235,7 @@ const AddJobForm = () => {
                                     </div>
                                     <div className="w-full h-10 mt-2">
                                         <div className="w-full h-full relative">
-                                            <div onClick={() => {handleIndustrySelect()}} className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between">
+                                            <div onClick={() => {handleIndustrySelect()}} className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between cursor-pointer">
                                                 <p className={`font-jakarta text-[15px] ${industrySelect === 'Select Industry Type' ? 'text-gray-500' : 'text-gray-800'}`}>{industrySelect}</p>
                                                 <div className="w-auto">
                                                     <MdOutlineKeyboardArrowDown className="text-gray-500"></MdOutlineKeyboardArrowDown>
@@ -279,12 +281,30 @@ const AddJobForm = () => {
                                     </div>
                                     <div className="w-full h-10 mt-2">
                                         <div className="w-full h-full relative">
-                                            <div className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between">
-                                                <p>Country</p>
+                                            <div onClick={() => {handleCountrySelect()}} className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between cursor-pointer">
+                                                <p className={`font-jakarta text-[15px] ${countrySelect === 'Select Country' ? 'text-gray-500' : 'text-gray-800'}`}>{countrySelect}</p>
                                                 <div className="w-auto">
                                                     <MdOutlineKeyboardArrowDown className="text-gray-500"></MdOutlineKeyboardArrowDown>
                                                 </div>
                                             </div>
+                                            {
+                                                countrySelectActive
+                                                &&
+                                                <div className="w-full h-[150px] absolute top-[120%] left-0 bg-white border border-slate-200/50 z-10 rounded-md shadow-md overflow-y-scroll">
+                                                    {
+                                                        countryType?.map((data) => (
+                                                            <div key={data?.id} className="w-full px-4 py-2 transition-all ease-linear duration-200 cursor-pointer hover:bg-emerald-600/5"
+                                                            onClick={() => {
+                                                                setCountrySelect(data?.country)
+                                                                setCountrySelectActive(false)
+                                                            }}
+                                                            >
+                                                                <p className="font-jakarta text-sm text-gray-800">{data?.country}</p>
+                                                            </div>
+                                                        ))
+                                                    }
+                                                </div>
+                                            }
                                         </div>
                                     </div>
                                 </div>

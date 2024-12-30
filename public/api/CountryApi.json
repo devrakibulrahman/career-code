@@ -1,42 +1,42 @@
 [
     {
         "id": 1,
-        "location": "London"
+        "country": "London"
     },
     {
         "id": 2,
-        "location": "America"
+        "country": "America"
     },
     {
         "id": 3,
-        "location": "Dubai"
+        "country": "Dubai"
     },
     {
         "id": 4,
-        "location": "Japan"
+        "country": "Japan"
     },
     {
         "id": 5,
-        "location": "China"
+        "country": "China"
     },
     {
         "id": 6,
-        "location": "Russia"
+        "country": "Russia"
     },
     {
         "id": 7,
-        "location": "Germany"
+        "country": "Germany"
     },
     {
         "id": 8,
-        "location": "New York"
+        "country": "New York"
     },
     {
         "id": 9,
-        "location": "Kuwait"
+        "country": "Kuwait"
     },
     {
         "id": 10,
-        "location": "Korea"
+        "country": "Korea"
     }
 ]
