@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "type": "Hourly"
+    },
+    {
+        "id": 2,
+        "type": "Monthly"
+    }
+]
