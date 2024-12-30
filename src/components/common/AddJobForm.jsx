@@ -2,8 +2,39 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Input from '../Input';
 import TextArea from '../TextArea';
 import InputNumber from "../InputNumber";
+import { useState } from "react";
+import { useJobCate, useJobType, useSalaryType } from "../../hooks/Hooks";
 
 const AddJobForm = () => {
+
+    // state declare here ---->
+    const [jobCateSelect, setJobCateSelect] = useState('Select Job Category');
+    const [jobTypeSelect, setJobTypeSelect] = useState('Select Job Type');
+    const [jobSalarySelect, setJobSalarySelect] = useState('Select Salary Type');
+
+    // hooks declare here ---->
+    const jobCate = useJobCate(`/api/jobCategoryApi.json`);
+    const jobType = useJobType(`/api/jobTypeApi.json`);
+    const salaryType = useSalaryType(`/api/salaryApi.json`);
+
+    // true and false state declare here ---->
+    const [jobCateSelectActive, setJobCateSelectActive] = useState(false);
+    const [jobTypeSelectActive, setJobTypeSelectActive] = useState(false);
+    const [salaryTypeSelectActive, setSalaryTypeSelectActive] = useState(false);
+
+    // event function handle declare here ---->
+    const handleJobCateSelect = () => {
+        setJobCateSelectActive(!jobCateSelectActive);
+    };
+
+    const handleJobTypeSelect = () => {
+        setJobTypeSelectActive(!jobTypeSelectActive);
+    };
+
+    const handleSalaryTypeSelect = () => {
+        setSalaryTypeSelectActive(!salaryTypeSelectActive);
+    };
+
     return (
         <>
             <div className="w-full">
