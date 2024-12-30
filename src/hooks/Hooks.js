@@ -91,6 +91,19 @@ const useJobCate = (url) => {
     return jobCate;
 };
 
+const useJobType = (url) => {
+    const [jobType, setJobType] = useState(null);
+
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setJobType(data))
+            .catch(err => console.log(err))
+    }, [url]);
+
+    return jobType;
+};
+
 const useScrollWindow = () => {
     const [winScroll, setWinScroll] = useState(false);
 
@@ -107,4 +120,4 @@ const useScrollWindow = () => {
     return winScroll;
 };
 
-export { useLocations, useJobFilter, usePopularCate, useCareerCode, useLatestNews, useContact, useJobCate, useScrollWindow };
+export { useLocations, useJobFilter, usePopularCate, useCareerCode, useLatestNews, useContact, useJobCate, useJobType, useScrollWindow };
