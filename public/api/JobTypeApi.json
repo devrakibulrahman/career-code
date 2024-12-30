@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "type": "Full Time"
+    },
+    {
+        "id": 2,
+        "type": "Part Time"
+    },
+    {
+        "id": 3,
+        "type": "Remote Job"
+    },
+    {
+        "id": 4,
+        "type": "Office Work"
+    }
+]
