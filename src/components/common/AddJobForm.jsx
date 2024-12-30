@@ -274,8 +274,8 @@ const AddJobForm = () => {
                                     <Input placeholder='Address'></Input>
                                 </div>
                             </div>
-                            <div className="w-full grid gap-3 mt-4 lg:grid-cols-12">
-                                <div className="w-auto lg:col-span-6">
+                            <div className="w-full mt-4">
+                                <div className="w-auto">
                                     <div className="w-full">
                                         <label className="font-jakarta text-[15px] text-gray-800 font-semibold">Country:</label>
                                     </div>
@@ -305,21 +305,6 @@ const AddJobForm = () => {
                                                     }
                                                 </div>
                                             }
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="w-auto lg:col-span-6">
-                                    <div className="w-full">
-                                        <label className="font-jakarta text-[15px] text-gray-800 font-semibold">State:</label>
-                                    </div>
-                                    <div className="w-full h-10 mt-2">
-                                        <div className="w-full h-full relative">
-                                            <div className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between">
-                                                <p>Select Category</p>
-                                                <div className="w-auto">
-                                                    <MdOutlineKeyboardArrowDown className="text-gray-500"></MdOutlineKeyboardArrowDown>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
