@@ -24,10 +24,10 @@ const JobDetail = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full min-h-[500px] py-16 lg:py-24">
+                <div className="w-full min-h-[500px] py-16 relative lg:py-24">
                     <div className="container mx-auto px-4">
                         <div className="w-full grid gap-6 grid-cols-1 lg:grid-cols-3">
-                            <div className="w-full min-h-[500px] border border-slate-200/50 rounded-md">
+                            <div className="w-full h-[466px] border border-slate-200/50 rounded-md col-span-1 sticky top-[9%]">
                                 <div className="w-full p-6 border-b border-slate-200/50">
                                     <p className="font-jakarta text-lg font-semibold text-gray-800">Job Information</p>
                                 </div>
@@ -77,7 +77,7 @@ const JobDetail = () => {
                                             <p className="font-jakarta text-sm text-emerald-600 font-medium mt-1">MCA</p>
                                         </div>
                                     </div>
-                                    <div className="w-full flex items-center mb-3">
+                                    <div className="w-full flex items-center">
                                         <div className="w-auto">
                                             <LuDollarSign size={21} className="text-gray-800"></LuDollarSign>
                                         </div>
@@ -86,6 +86,17 @@ const JobDetail = () => {
                                             <p className="font-jakarta text-sm text-emerald-600 font-medium mt-1">$4000-$4500</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div className="w-full min-h-[400px] col-span-2">
+                                <div className="w-full">
+                                    <p className="font-jakarta text-lg text-gray-800 font-semibold">Job Description:</p>
+                                </div>
+                                <div className="w-full mt-4">
+                                    <p className="font-jakarta text-[15px] text-slate-400 leading-relaxed">praesentium esse incidunt, recusandae iure, minima facilis! Quo doloremque vero fugiat veritatis sapiente dolorem incidunt dolore, iste, excepturi vel reiciendis dolores neque perspiciatis! Voluptatum consequatur quisquam molestias, repellat est laudantium optio earum fuga, deserunt dolores maiores qui perspiciatis labore iure odio numquam doloribus, error unde cupiditate porro fugiat delectus. Excepturi tempore ea tempora officiis. A sapiente blanditiis quisquam saepe magnam. Qui reiciendis asperiores quae expedita placeat accusamus repudiandae animi molestiae totam hic, quia recusandae beatae cupiditate, ut odio nulla temporibus ullam iste. Expedita quos, consectetur excepturi eligendi nesciunt commodi earum eaque sit corrupti optio cupiditate temporibus maiores quae. Ex obcaecati corrupti dolore similique eligendi sit, necessitatibus ullam reprehenderit iusto in officia sapiente aliquid illo. Aliquam expedita quasi sequi facere. Sequi provident fuga rem nisi perferendis, blanditiis vel, accusamus qui quae ea voluptas aperiam dolorum excepturi enim minima omnis, natus perspiciatis quas officia. Sint, vero laborum non natus aut rerum laudantium voluptatum quam deleniti quas ad excepturi, quaerat tempore id corporis, ab voluptatem dolore temporibus dicta doloribus eveniet? Illum, quam saepe iste ex nulla delectus dolores ut necessitatibus voluptate nesciunt laudantium blanditiis sequi vitae harum ullam quis quo cupiditate, amet commodi minus id sint esse velit! Provident atque minima vitae sed nihil voluptas aliquam sint libero? Adipisci ipsum dolorem iure!</p>
+                                </div>
+                                <div className="w-full mt-5">
+                                    <button className="font-jakarta text-[15px] font-semibold text-white py-2 px-6 bg-emerald-600 rounded-md transition ease-linear duration-200 hover:bg-emerald-700">Apply Now</button>
                                 </div>
                             </div>
                         </div>
