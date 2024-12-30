@@ -11,7 +11,8 @@ const AddJobForm = () => {
     const [jobCateSelect, setJobCateSelect] = useState('Select Job Category');
     const [jobTypeSelect, setJobTypeSelect] = useState('Select Job Type');
     const [jobSalarySelect, setJobSalarySelect] = useState('Select Salary Type');
-    const [industrySelect, setIndustrySelect] = useState('Select Industry Type')
+    const [industrySelect, setIndustrySelect] = useState('Select Industry Type');
+    const [country, setCountry] = useState('Select Country');
 
     // hooks declare here ---->
     const jobCate = useJobCate(`/api/jobCategoryApi.json`);
@@ -24,6 +25,7 @@ const AddJobForm = () => {
     const [jobTypeSelectActive, setJobTypeSelectActive] = useState(false);
     const [salaryTypeSelectActive, setSalaryTypeSelectActive] = useState(false);
     const [industrySelectActive, setIndustrySelectActive] = useState(false);
+    const [countrySelectActive, setCountrySelectActive] = useState(false);
 
     // event function handle declare here ---->
     const handleJobCateSelect = () => {
@@ -31,6 +33,7 @@ const AddJobForm = () => {
         setJobTypeSelectActive(false);
         setSalaryTypeSelectActive(false);
         setIndustrySelectActive(false);
+        setCountrySelectActive(false);
     };
 
     const handleJobTypeSelect = () => {
@@ -38,6 +41,7 @@ const AddJobForm = () => {
         setJobCateSelectActive(false);
         setSalaryTypeSelectActive(false);
         setIndustrySelectActive(false);
+        setCountrySelectActive(false);
     };
 
     const handleSalaryTypeSelect = () => {
@@ -45,6 +49,7 @@ const AddJobForm = () => {
         setJobCateSelectActive(false);
         setJobTypeSelectActive(false);
         setIndustrySelectActive(false);
+        setCountrySelectActive(false);
     };
 
     const handleIndustrySelect = () => {
@@ -52,6 +57,14 @@ const AddJobForm = () => {
         setJobCateSelectActive(false);
         setSalaryTypeSelectActive(false);
         setJobTypeSelectActive(false);
+        setCountrySelectActive(false);
+    };
+
+    const handleCountrySelect = () => {
+        setCountrySelectActive(!countrySelectActive);
+        setJobTypeSelectActive(false);
+        setJobCateSelectActive(false);
+        setSalaryTypeSelectActive(false);
     };
 
     return (
