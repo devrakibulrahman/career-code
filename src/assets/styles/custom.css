@@ -57,3 +57,17 @@ input[type="checkbox"]:checked::after {
 }
 
 /*? custom input check box ----------------->  */
+
+/*? custom input number ----------------->  */
+
+input[type="number"] {
+    appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*? custom input number ----------------->  */

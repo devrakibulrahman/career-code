@@ -1,5 +1,6 @@
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import AddJobForm from "../components/common/AddJobForm";
 
 const AddJob = () => {
     return (
@@ -17,6 +18,15 @@ const AddJob = () => {
                                     <RiArrowRightSLine className="font-semibold text-xl mt-[3px] text-white/50"></RiArrowRightSLine>
                                     <Link to='/' className="font-jakarta text-[15px] font-semibold text-white">Add Job</Link>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full py-16 lg:py-24">
+                    <div className="container mx-auto px-4">
+                        <div className="w-full flex items-center justify-center">
+                            <div className="w-full max-w-[745px] min-h-[500px] p-6 border border-slate-200/50 rounded-lg">
+                                <AddJobForm></AddJobForm>
                             </div>
                         </div>
                     </div>
