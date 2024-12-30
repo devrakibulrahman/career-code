@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "cate": "Web Designer"
+    },
+    {
+        "id": 2,
+        "cate": "Web Developer"
+    },
+    {
+        "id": 3,
+        "cate": "UI/UX Designer"
+    }
+]
