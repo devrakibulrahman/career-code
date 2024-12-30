@@ -3,7 +3,7 @@ import Input from '../Input';
 import TextArea from '../TextArea';
 import InputNumber from "../InputNumber";
 import { useState } from "react";
-import { useJobCate, useJobType, useSalaryType } from "../../hooks/Hooks";
+import { useIndustryType, useJobCate, useJobType, useSalaryType } from "../../hooks/Hooks";
 
 const AddJobForm = () => {
 
@@ -11,28 +11,47 @@ const AddJobForm = () => {
     const [jobCateSelect, setJobCateSelect] = useState('Select Job Category');
     const [jobTypeSelect, setJobTypeSelect] = useState('Select Job Type');
     const [jobSalarySelect, setJobSalarySelect] = useState('Select Salary Type');
+    const [industrySelect, setIndustrySelect] = useState('Select Industry Type')
 
     // hooks declare here ---->
     const jobCate = useJobCate(`/api/jobCategoryApi.json`);
     const jobType = useJobType(`/api/jobTypeApi.json`);
     const salaryType = useSalaryType(`/api/salaryApi.json`);
+    const industryType = useIndustryType(`/api/industryTypeApi.json`);
 
     // true and false state declare here ---->
     const [jobCateSelectActive, setJobCateSelectActive] = useState(false);
     const [jobTypeSelectActive, setJobTypeSelectActive] = useState(false);
     const [salaryTypeSelectActive, setSalaryTypeSelectActive] = useState(false);
+    const [industrySelectActive, setIndustrySelectActive] = useState(false);
 
     // event function handle declare here ---->
     const handleJobCateSelect = () => {
         setJobCateSelectActive(!jobCateSelectActive);
+        setJobTypeSelectActive(false);
+        setSalaryTypeSelectActive(false);
+        setIndustrySelectActive(false);
     };
 
     const handleJobTypeSelect = () => {
         setJobTypeSelectActive(!jobTypeSelectActive);
+        setJobCateSelectActive(false);
+        setSalaryTypeSelectActive(false);
+        setIndustrySelectActive(false);
     };
 
     const handleSalaryTypeSelect = () => {
         setSalaryTypeSelectActive(!salaryTypeSelectActive);
+        setJobCateSelectActive(false);
+        setJobTypeSelectActive(false);
+        setIndustrySelectActive(false);
+    };
+
+    const handleIndustrySelect = () => {
+        setIndustrySelectActive(!industrySelectActive);
+        setJobCateSelectActive(false);
+        setSalaryTypeSelectActive(false);
+        setJobTypeSelectActive(false);
     };
 
     return (
@@ -63,12 +82,30 @@ const AddJobForm = () => {
                                     </div>
                                     <div className="w-full h-10 mt-2">
                                         <div className="w-full h-full relative">
-                                            <div className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between">
-                                                <p>Select Category</p>
+                                            <div onClick={() => {handleJobCateSelect()}} className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between cursor-pointer">
+                                                <p className={`font-jakarta text-[15px] ${jobCateSelect === 'Select Job Category' ? 'text-gray-500' : 'text-gray-800'}`}>{jobCateSelect}</p>
                                                 <div className="w-auto">
-                                                    <MdOutlineKeyboardArrowDown className="text-gray-500"></MdOutlineKeyboardArrowDown>
+                                                    <MdOutlineKeyboardArrowDown className={`text-gray-500 transition ease-linear duration-200 ${jobCateSelectActive && 'rotate-180'}`}></MdOutlineKeyboardArrowDown>
                                                 </div>
                                             </div>
+                                            {
+                                                jobCateSelectActive
+                                                &&
+                                                <div className="w-full min-h-[100px] absolute top-[120%] left-0 bg-white border border-slate-200/50 z-10 rounded-md shadow-md">
+                                                    {
+                                                        jobCate?.map((data) => (
+                                                            <div key={data.id} className="w-full px-4 py-2 transition-all ease-linear duration-200 cursor-pointer hover:bg-emerald-600/5"
+                                                            onClick={() => {
+                                                                setJobCateSelect(data?.cate)
+                                                                setJobCateSelectActive(false)
+                                                            }}
+                                                            >
+                                                                <p className="font-jakarta text-sm text-gray-800">{data?.cate}</p>
+                                                            </div>
+                                                        ))
+                                                    }
+                                                </div>
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -78,12 +115,30 @@ const AddJobForm = () => {
                                     </div>
                                     <div className="w-full h-10 mt-2">
                                         <div className="w-full h-full relative">
-                                            <div className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between">
-                                                <p>Select Job Type</p>
+                                            <div onClick={() => {handleJobTypeSelect()}} className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between cursor-pointer">
+                                                <p className={`font-jakarta text-[15px] ${jobTypeSelect === 'Select Job Type' ? 'text-gray-500' : 'text-gray-800'}`}>{jobTypeSelect}</p>
                                                 <div className="w-auto">
-                                                    <MdOutlineKeyboardArrowDown className="text-gray-500"></MdOutlineKeyboardArrowDown>
+                                                    <MdOutlineKeyboardArrowDown className={`text-gray-500 transition ease-linear duration-200 ${jobTypeSelectActive && 'rotate-180'}`}></MdOutlineKeyboardArrowDown>
                                                 </div>
                                             </div>
+                                            {
+                                                jobTypeSelectActive
+                                                &&
+                                                <div className="w-full min-h-[100px] absolute top-[120%] left-0 bg-white border border-slate-200/50 z-10 rounded-md shadow-md">
+                                                    {
+                                                        jobType?.map((data) => (
+                                                            <div key={data?.id} className="w-full px-4 py-2 transition-all ease-linear duration-200 cursor-pointer hover:bg-emerald-600/5"
+                                                            onClick={() => {
+                                                                setJobTypeSelect(data?.type)
+                                                                setJobTypeSelectActive(false)
+                                                            }}
+                                                            >
+                                                                <p className="font-jakarta text-sm text-gray-800">{data?.type}</p>
+                                                            </div>
+                                                        ))
+                                                    }
+                                                </div>
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -96,12 +151,30 @@ const AddJobForm = () => {
                                     <div className="w-auto lg:col-span-6">
                                         <div className="w-full h-10">
                                             <div className="w-full h-full relative">
-                                                <div className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between">
-                                                    <p>Select Type</p>
+                                                <div onClick={() => {handleSalaryTypeSelect()}} className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between cursor-pointer">
+                                                    <p className={`font-jakarta text-[15px] ${jobSalarySelect === 'Select Salary Type' ? 'text-gray-500' : 'text-gray-800'}`}>{jobSalarySelect}</p>
                                                     <div className="w-auto">
-                                                        <MdOutlineKeyboardArrowDown className="text-gray-500"></MdOutlineKeyboardArrowDown>
+                                                        <MdOutlineKeyboardArrowDown className={`text-gray-500 transition ease-linear duration-200 ${salaryTypeSelectActive && 'rotate-180'}`}></MdOutlineKeyboardArrowDown>
                                                     </div>
                                                 </div>
+                                                {
+                                                    salaryTypeSelectActive
+                                                    &&
+                                                    <div className="w-full min-h-[50px] absolute top-[120%] left-0 bg-white border border-slate-200/50 z-10 rounded-md shadow-md">
+                                                        {
+                                                            salaryType?.map((data) => (
+                                                                <div key={data?.id} className="w-full px-4 py-2 transition-all ease-linear duration-200 cursor-pointer hover:bg-emerald-600/5"
+                                                                onClick={() => {
+                                                                    setJobSalarySelect(data?.type)
+                                                                    setSalaryTypeSelectActive(false)
+                                                                }}
+                                                                >
+                                                                    <p className="font-jakarta text-sm text-gray-800">{data?.type}</p>
+                                                                </div>
+                                                            ))
+                                                        }
+                                                    </div>
+                                                }
                                             </div>
                                         </div>
                                     </div>
@@ -147,12 +220,30 @@ const AddJobForm = () => {
                                     </div>
                                     <div className="w-full h-10 mt-2">
                                         <div className="w-full h-full relative">
-                                            <div className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between">
-                                                <p>Select Category</p>
+                                            <div onClick={() => {handleIndustrySelect()}} className="dropdown w-full h-full border border-slate-200/50 rounded-md px-3 flex items-center justify-between">
+                                                <p className={`font-jakarta text-[15px] ${industrySelect === 'Select Industry Type' ? 'text-gray-500' : 'text-gray-800'}`}>{industrySelect}</p>
                                                 <div className="w-auto">
                                                     <MdOutlineKeyboardArrowDown className="text-gray-500"></MdOutlineKeyboardArrowDown>
                                                 </div>
                                             </div>
+                                            {
+                                                industrySelectActive
+                                                &&
+                                                <div className="w-full min-h-[50px] absolute top-[120%] left-0 bg-white border border-slate-200/50 z-10 rounded-md shadow-md">
+                                                    {
+                                                        industryType?.map((data) => (
+                                                            <div key={data?.id} className="w-full px-4 py-2 transition-all ease-linear duration-200 cursor-pointer hover:bg-emerald-600/5"
+                                                            onClick={() => {
+                                                                setIndustrySelect(data?.type)
+                                                                setIndustrySelectActive(false)
+                                                            }}
+                                                            >
+                                                                <p className="font-jakarta text-sm text-gray-800">{data?.type}</p>
+                                                            </div>
+                                                        ))
+                                                    }
+                                                </div>
+                                            }
                                         </div>
                                     </div>
                                 </div>

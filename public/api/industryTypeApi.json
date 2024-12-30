@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "type": "Agency"
+    },
+    {
+        "id": 2,
+        "type": "Software Development"
+    },
+    {
+        "id": 3,
+        "type": "Startup"
+    }
+]

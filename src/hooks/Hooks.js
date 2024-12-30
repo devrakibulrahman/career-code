@@ -117,6 +117,19 @@ const useSalaryType = (url) => {
     return salary;
 };
 
+const useIndustryType = (url) => {
+    const [industry, setIndustry] = useState(null);
+
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setIndustry(data))
+            .catch(err => console.log(err))
+    }, [url]);
+
+    return industry;
+};
+
 const useScrollWindow = () => {
     const [winScroll, setWinScroll] = useState(false);
 
@@ -133,4 +146,4 @@ const useScrollWindow = () => {
     return winScroll;
 };
 
-export { useLocations, useJobFilter, usePopularCate, useCareerCode, useLatestNews, useContact, useJobCate, useJobType, useSalaryType, useScrollWindow };
+export { useLocations, useJobFilter, usePopularCate, useCareerCode, useLatestNews, useContact, useJobCate, useJobType, useSalaryType, useIndustryType, useScrollWindow };
