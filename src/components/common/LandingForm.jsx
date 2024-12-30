@@ -55,7 +55,7 @@ const LandingForm = () => {
                                 {
                                     selectLocation
                                     &&
-                                    <div className="w-full h-[150px] bg-white rounded-md shadow-sm absolute top-[60px] left-0 mt-3 z-10 overflow-y-scroll p-2 transition ease-linear duration-200 hover:overflow-hidden">
+                                    <div className="w-full min-h-[150px] bg-white rounded-md shadow-sm absolute top-[60px] left-0 mt-3 z-10 p-2 transition ease-linear duration-200 hover:overflow-hidden">
                                         {
                                             locationData.map(data => (
                                                 <div key={data.id} onClick={() => {
@@ -90,7 +90,7 @@ const LandingForm = () => {
                                 {
                                     selectJobFilter
                                     &&
-                                    <div className="w-full h-[150px] bg-white rounded-md shadow-sm absolute top-[60px] left-0 mt-3 z-10 overflow-y-scroll p-2 transition ease-linear duration-200 hover:overflow-hidden">
+                                    <div className="w-full min-h-[150px] bg-white rounded-md shadow-sm absolute top-[60px] left-0 mt-3 z-10 p-2 transition ease-linear duration-200 hover:overflow-hidden">
                                         {
                                             filterData.map(data => (
                                                 <div key={data.id} onClick={() => {
